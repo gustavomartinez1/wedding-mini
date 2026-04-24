@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bodas - Plan Mini</title>
+  <meta name="description" content="Invitación de boda personalizada">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            crema: 'var(--color-crema)',
+            dorado: 'var(--color-dorado)',
+            oscuro: 'var(--color-texto)',
+          },
+          fontFamily: {
+            titulo: ['var(--font-titulo)', 'serif'],
+            cuerpo: ['var(--font-cuerpo)', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- CSS PERSONALIZADO -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-crema text-oscuro font-cuerpo">
+  
+  <!-- HERO SECTION -->
+  <section id="hero" class="hero-section min-h-screen flex items-center justify-center relative overflow-hidden">
+    <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('assets/hero.jpg');"></div>
+    <div class="absolute inset-0 bg-black/30"></div>
+    <div class="relative z-10 text-center text-white px-4">
+      <p class="font-titulo text-2xl md:text-4xl tracking-widest uppercase mb-4 opacity-0 animate-fade-in">Save the Date</p>
+      <h1 class="font-titulo text-5xl md:text-7xl lg:text-8xl font-semibold mb-4 opacity-0 animate-fade-in" style="animation-delay: 0.3s;">Nombre Ella</h1>
+      <p class="font-titulo text-3xl md:text-5xl mb-4 opacity-0 animate-fade-in" style="animation-delay: 0.6s;">&</p>
+      <h1 class="font-titulo text-5xl md:text-7xl lg:text-8xl font-semibold mb-8 opacity-0 animate-fade-in" style="animation-delay: 0.9s;">Nombre Él</h1>
+      <p class="font-titulo text-xl md:text-2xl tracking-wider opacity-0 animate-fade-in" style="animation-delay: 1.2s;">15 de Junio de 2025</p>
+    </div>
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+      <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+      </svg>
+    </div>
+  </section>
+  
+  <!-- INFO SECTION -->
+  <section id="info" class="py-20 px-4">
+    <div class="max-w-2xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="font-titulo text-4xl md:text-5xl text-dorado mb-4">Detalles del Evento</h2>
+        <div class="w-16 h-0.5 bg-dorado mx-auto"></div>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Fecha -->
+        <div class="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-lg transition-shadow duration-300">
+          <div class="w-12 h-12 mx-auto mb-4 text-dorado">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+            </svg>
+          </div>
+          <h3 class="font-titulo text-2xl text-dorado mb-2">Fecha</h3>
+          <p class="text-lg">Domingo<br>15 de Junio 2025</p>
+        </div>
+        
+        <!-- Hora -->
+        <div class="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-lg transition-shadow duration-300">
+          <div class="w-12 h-12 mx-auto mb-4 text-dorado">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h3 class="font-titulo text-2xl text-dorado mb-2">Hora</h3>
+          <p class="text-lg">Ceremonia: 16:00<br>Cóctel: 18:00</p>
+        </div>
+        
+        <!-- Dress Code -->
+        <div class="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-lg transition-shadow duration-300">
+          <div class="w-12 h-12 mx-auto mb-4 text-dorado">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path>
+            </svg>
+          </div>
+          <h3 class="font-titulo text-2xl text-dorado mb-2">Dress Code</h3>
+          <p class="text-lg">Formal<br><span class="text-sm opacity-75">Traje largo o cóctel elegante</span></p>
+        </div>
+      </div>
+      
+      <!-- Lugar -->
+      <div class="bg-white p-8 rounded-lg shadow-md mt-8 text-center">
+        <h3 class="font-titulo text-2xl text-dorado mb-2">Ubicación</h3>
+        <p class="text-lg mb-2">Hacienda Los Cipreses</p>
+        <p class="opacity-75">Carretera 45, Km 12, Valle de Bravo<br>Estado de México</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- RSVP SECTION -->
+  <section id="rsvp" class="py-20 px-4 bg-oscuro/5">
+    <div class="max-w-xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="font-titulo text-4xl md:text-5xl text-dorado mb-4">Confirmar Asistencia</h2>
+        <div class="w-16 h-0.5 bg-dorado mx-auto"></div>
+        <p class="mt-4 opacity-75">Por favor, confirma tu asistencia antes del 1 de Junio</p>
+      </div>
+      
+      <!-- Formspree Form -->
+      <form action="https://formspree.io/f/TU_FORM_ID" method="POST" class="bg-white p-8 rounded-lg shadow-md space-y-6">
+        <div>
+          <label for="nombre" class="block text-sm font-medium mb-2">Nombre(s) completo(s)</label>
+          <input type="text" id="nombre" name="nombre" required
+            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-dorado focus:border-transparent outline-none transition-all"
+            placeholder="Ej: María García y Juan López">
+        </div>
+        
+        <div>
+          <label for="asistentes" class="block text-sm font-medium mb-2">Número de asistentes</label>
+          <select id="asistentes" name="asistentes" required
+            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-dorado focus:border-transparent outline-none transition-all">
+            <option value="">Selecciona...</option>
+            <option value="1">1 persona</option>
+            <option value="2">2 personas</option>
+            <option value="3">3 personas</option>
+            <option value="4">4 personas</option>
+          </select>
+        </div>
+        
+        <div>
+          <label for="alergia" class="block text-sm font-medium mb-2">Alergias alimentarias o restricciones</label>
+          <textarea id="alergia" name="alergia" rows="3"
+            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-dorado focus:border-transparent outline-none transition-all resize-none"
+            placeholder="Ej: Alergia a mariscos, vegetariano, etc."></textarea>
+        </div>
+        
+        <button type="submit" 
+          class="w-full bg-dorado text-white font-cuerpo py-3 px-6 rounded-lg hover:bg-opacity-90 transition-all duration-300 transform hover:scale-[1.02]">
+          Confirmar Asistencia
+        </button>
+      </form>
+    </div>
+  </section>
+  
+  <!-- MAPA SECTION -->
+  <section id="mapa" class="py-20 px-4">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="font-titulo text-4xl md:text-5xl text-dorado mb-4">Cómo Llegar</h2>
+        <div class="w-16 h-0.5 bg-dorado mx-auto"></div>
+      </div>
+      
+      <div class="rounded-lg overflow-hidden shadow-md h-96 md:h-[500px]">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.5!2d-100.39!3d19.39!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!3m3!1e1!2sm!3s!5e1!4e1!5e1!3m2!1s0x0:0x0!2sm!3s!5e1!4e1!5e1!3m2!1s0x0:0x0!2s"
+          width="100%" 
+          height="100%" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+  
+  <!-- FOOTER -->
+  <footer class="py-8 px-4 bg-oscuro text-white text-center">
+    <p class="font-titulo text-xl text-dorado mb-2">Nombre Ella & Nombre Él</p>
+    <p class="text-sm opacity-75">Gracias por ser parte de nuestro día especial</p>
+  </footer>
+  
+</body>
+</html>

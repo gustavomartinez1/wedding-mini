@@ -1,0 +1,202 @@
+/* ========================================
+   VELTRUX WEDDING MINI - STYLES.CSS
+   ======================================== */
+
+/* === VARIABLES CSS (PARA PERSONALIZAR) === */
+:root {
+  /* Colores por defecto */
+  --color-crema: #FAF7F2;
+  --color-dorado: #C9A84C;
+  --color-texto: #2D2D2D;
+  
+  /* Fuentes */
+  --font-titulo: 'Cormorant Garamond', serif;
+  --font-cuerpo: 'Lato', sans-serif;
+}
+
+/* === RESET Y BASE === */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-cuerpo);
+  color: var(--color-texto);
+  background-color: var(--color-crema);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* === HERO SECTION === */
+.hero-section {
+  background-color: var(--color-texto);
+}
+
+.hero-section .bg-cover {
+  /* Placeholder: imagen de 1920x1080 - replaces with actual hero.jpg */
+  background-position: center;
+}
+
+/* === TIPOGRAFÍA === */
+.font-titulo {
+  font-family: var(--font-titulo);
+}
+
+.font-cuerpo {
+  font-family: var(--font-cuerpo);
+}
+
+/* === ANIMACIONES CSS PURO === */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 1s ease-out forwards;
+}
+
+@keyframes bounce-slow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: -10px;
+  }
+}
+
+.animate-bounce {
+  animation: bounce-slow 2s ease-in-out infinite;
+}
+
+/* === TRANSICIONES SUAVES === */
+a, button, .hover-shadow {
+  transition: all 0.3s ease;
+}
+
+/* === FORMULARIO === */
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.2);
+}
+
+button[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(201, 168, 76, 0.3);
+}
+
+button[type="submit"]:active {
+  transform: translateY(0);
+}
+
+/* === MAPA === */
+iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: clamp(2.5rem, 8vw, 4rem);
+  }
+  
+  #info .grid {
+    gap: 1.5rem;
+  }
+  
+  #info .grid > div {
+    padding: 1.5rem;
+  }
+}
+
+/* === UTILIDADES === */
+.text-dorado {
+  color: var(--color-dorado);
+}
+
+.bg-dorado {
+  background-color: var(--color-dorado);
+}
+
+.bg-crema {
+  background-color: var(--color-crema);
+}
+
+.bg-oscuro {
+  background-color: var(--color-texto);
+}
+
+.border-dorado {
+  border-color: var(--color-dorado);
+}
+
+.focus\:ring-dorado:focus {
+  --tw-ring-color: var(--color-dorado);
+}
+
+.hover\:bg-opacity-90:hover {
+  opacity: 0.9;
+}
+
+/* === SCROLLBAR PERSONALIZADA === */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-crema);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-dorado);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b89a3d;
+}
+
+/* === MEJORAS DE ACCESIBILIDAD === */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* === PRINT STYLES === */
+@media print {
+  .hero-section {
+    min-height: auto;
+    padding: 2rem;
+  }
+  
+  .animate-bounce,
+  iframe {
+    display: none;
+  }
+}
