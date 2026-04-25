@@ -3,13 +3,11 @@ name: Deploy to Cloudflare Pages
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -20,5 +18,5 @@ jobs:
           api_token: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           account_id: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           project_name: wedding-mini
-          branch: main
+          branch: master
           directory: .
